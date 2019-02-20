@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=SPi-Box Config
+Comment=Turn on/off email, set the subject and recipient email address
+Icon=/home/pi/spibox/icons/SPI-BOXLogo.jpg
+Exec=sudo python /home/pi/spibox/spiboxconfig.py
+Type=Application
+Encoding=UTF-8
+Terminal=false
+Categories=None;
