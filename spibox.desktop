@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=SPi-Box
 Comment=Run SPi-Box PIR image capture script
-Icon=/home/pi/spibox/icons/SPI-BOXLogo.jpg
+Icon=/home/pi/Spi-Box/icons/SPI-BOXLogo.jpg
 Exec=sudo python /home/pi/spibox/spibox.py
 Type=Application
 Encoding=UTF-8
