@@ -12,11 +12,11 @@ class spibox_tk(Tkinter.Tk):
 
     def writeSpiBoxConfig(self):
         conf = ConfigParser.ConfigParser()
-        conf.read('/home/pi/spibox/spibox.conf')
+        conf.read('/home/pi/Spi-Box/spibox.conf')
         conf.set('email','emailsubject',self.emailsubject.get())
         conf.set('email','on',self.emailon.get())
         conf.set('email','emailrecipient',self.emailrecipient.get())
-        with open('/home/pi/spibox/spibox.conf','wb') as configfile:
+        with open('/home/pi/Spi-Box/spibox.conf','wb') as configfile:
             conf.write(configfile)
 
     def writeConfig(self):
@@ -24,7 +24,7 @@ class spibox_tk(Tkinter.Tk):
         self.quit()
 
     def testEmail(self):
-        subprocess.call(['mpack','-s',self.emailsubject.get(),'-c','image/jpeg','/home/pi/spibox/capture/test.image',self.emailrecipient.get()])
+        subprocess.call(['mpack','-s',self.emailsubject.get(),'-c','image/jpeg','/home/pi/Spi-Box/capture/test.image',self.emailrecipient.get()])
 
     def initialize(self):
         self.emailsubject = Tkinter.StringVar()
@@ -43,7 +43,7 @@ class spibox_tk(Tkinter.Tk):
         
         def readSpiBoxConfig(self):
            spiboxConf = ConfigParser.ConfigParser()
-           spiboxConf.read('/home/pi/spibox/spibox.conf')
+           spiboxConf.read('/home/pi/Spi-Box/spibox.conf')
            text = spiboxConf.get('email','emailsubject')
            self.emailsubject.set(text)
            text = spiboxConf.get('email','emailrecipient')
