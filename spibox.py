@@ -14,13 +14,13 @@ def photo():
     for i in range(1,2):
         capturename = get_file_name()
         print('Motion detected! Taking snapshot')
-        cmd="raspistill -w 640 -h 480 -n -t 10 -q 10 -e jpg -th none -o /home/pi/spibox/capture/" + capturename+"_%d.jpg" % (i)
+        cmd="raspistill -w 640 -h 480 -n -t 10 -q 10 -e jpg -th none -o /home/pi/Spi-Box/capture/" + capturename+"_%d.jpg" % (i)
         camerapid = subprocess.call(cmd,shell=True)
 
 class spiboxMessenger:
     def init(self):
         spiboxConf = ConfigParser.ConfigParser()
-        spiboxConf.read('/home/pi/spibox/spibox.conf')
+        spiboxConf.read('/home/pi/Spi-Box/spibox.conf')
         self.emailsubject = spiboxConf.get('email','emailsubject')
         self.emailrecipient = spiboxConf.get('email','emailrecipient')
         self.emailon = spiboxConf.get('email','on')
@@ -28,7 +28,7 @@ class spiboxMessenger:
     def getFileList(self):
        self.filelist = []
        i = 0
-       for file in os.listdir("/home/pi/spibox/capture"):
+       for file in os.listdir("/home/pi/Spi-Box/capture"):
           if file.endswith(".jpg"):
              self.filelist.extend([None])
              self.filelist[i] = file
@@ -37,13 +37,13 @@ class spiboxMessenger:
     def moveFiles(self):
         for filename in self.filelist:
             print('moving'+filename)
-            pid = subprocess.call(['sudo','mv','/home/pi/spibox/capture/'+filename,'/home/pi/spibox/capture/archive/'])
+            pid = subprocess.call(['sudo','mv','/home/pi/Spi-Box/capture/'+filename,'/home/pi/Spi-Box/capture/archive/'])
 
     def emailFiles(self):
         print(len(self.filelist))
         for filename in self.filelist:
             print('emailing'+filename)
-            cmd = 'mpack -s "'+self.emailsubject+'" -c image/jpeg /home/pi/spibox/capture/'+filename + ' '+self.emailrecipient
+            cmd = 'mpack -s "'+self.emailsubject+'" -c image/jpeg /home/pi/Spi-Box/capture/'+filename + ' '+self.emailrecipient
             pid = subprocess.call(cmd, shell=True)
 
 
