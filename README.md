@@ -49,15 +49,15 @@ Motion Activated Security Camera
 
 8. Repeat Step 6 for sending a test mail
 
-9. Click 'SPi-Box Config' icon placed on desktop, and configure it:
+9. Double Click on 'SPi-Box Config' icon placed on desktop, and configure it:
    - Tick on "turn on email"
    - Enter the subject
    - Enter the email recipient address
-   - Click on "Test EMail" for checking configuration is correct
+   - Click on "Test Email" for checking configuration is correct
    - Press "save and quit"
    
-10. Connect the Camera with Raspberry pi and PIR sensor output to 'GPIO 4' of Raspberry Pi
+10. Connect the Camera with Raspberry pi and PIR sensor output to 'GPIO 4' i.e. Pin 7 of Raspberry Pi
 
 11. Enable Camera in Raspberry Pi Configuration and Restart the Raspberry Pi
 
-12. Click on "SPi-Box" icon on Desktop, to run the script and if motion is dectected it will click and image and email it
+12. Double Click on "SPi-Box" icon on Desktop, to run the script and if motion is dectected it will click and image and email it
