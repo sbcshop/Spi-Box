@@ -1,0 +1,12 @@
+[Unit]
+Description=Start Spi
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/Spi-Box/spibox.py
+Restart=always
+StandardOutput=inherit
+StandardError=inherit
+
+[Install]
+WantedBy=multi-user.target
