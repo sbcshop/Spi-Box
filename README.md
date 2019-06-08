@@ -61,3 +61,9 @@ Motion Activated Security Camera
 11. Enable Camera in Raspberry Pi Configuration and Restart the Raspberry Pi
 
 12. Double Click on "SPi-Box" icon on Desktop, to run the script and if motion is dectected it will click and image and email it
+
+13. Install MP4Box with:
+     ```
+     sudo apt-get install -y gpac
+     ```
+
