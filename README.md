@@ -20,7 +20,13 @@ Motion Activated Security Camera
    sudo apt-get install mpack
    ```   
    
-5. Edit SSMTP configuration file:
+5. Install MP4Box with:
+     ```
+     sudo apt-get install -y gpac
+     ```
+
+   
+6. Edit SSMTP configuration file:
    ```
    sudo nano /etc/ssmtp/ssmtp.conf
    ```
@@ -36,7 +42,7 @@ Motion Activated Security Camera
    UseTLS=YES
    ```
 
-6. Send a test mail using command:
+7. Send a test mail using command:
    ```
    mpack -s "subject" file_path recipient@gmail.com
    ```
@@ -45,25 +51,20 @@ Motion Activated Security Camera
    mpack -s "test mail" /home/pi/image.png abc@gmail.com
    ```
    
-7. Google will block your sign-in attempts. Check your mail Inbox and allow to less securing apps so that Raspberry can send Emails
+8. Google will block your sign-in attempts. Check your mail Inbox and allow to less securing apps so that Raspberry can send Emails
 
-8. Repeat Step 6 for sending a test mail
+9. Repeat Step 6 for sending a test mail
 
-9. Double Click on 'SPi-Box Config' icon placed on desktop, and configure it:
+10. Double Click on 'SPi-Box Config' icon placed on desktop, and configure it:
    - Tick on "turn on email"
    - Enter the subject
    - Enter the email recipient address
    - Click on "Test Email" for checking configuration is correct
    - Press "save and quit"
    
-10. Connect the Camera with Raspberry pi and PIR sensor output to 'GPIO 4' i.e. Pin 7 of Raspberry Pi
+11. Connect the Camera with Raspberry pi and PIR sensor output to 'GPIO 4' i.e. Pin 7 of Raspberry Pi
 
-11. Enable Camera in Raspberry Pi Configuration and Restart the Raspberry Pi
+12. Enable Camera in Raspberry Pi Configuration and Restart the Raspberry Pi
 
-12. Double Click on "SPi-Box" icon on Desktop, to run the script and if motion is dectected it will click and image and email it
-
-13. Install MP4Box with:
-     ```
-     sudo apt-get install -y gpac
-     ```
+13. Double Click on "SPi-Box" icon on Desktop, to run the script and if motion is dectected it will click and image and email it
 
