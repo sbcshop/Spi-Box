@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Spi-Box
+Comment=Run SPi-Box PIR image capture script
+Icon=/home/pi/Spi-Box/icons/SPI-BOXLogo.png
+Exec=/usr/bin/python3 /home/pi/Spi-Box/spibox.py
+Type=Application
+Encoding=UTF-8
+Terminal=true
+Categories=None;
