@@ -1,5 +1,5 @@
 # Spi-Box
-Motion Activated Security Camera
+Motion Activated Security Camera based on raspberry pi.
 
 <img src="https://cdn.shopify.com/s/files/1/1217/2104/products/SKU03273_1800x1800.jpg?v=1558360585" width="300">
 
